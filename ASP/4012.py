@@ -38,7 +38,7 @@ employees = {
 }
 
 # شناسه کارمند
-employee_id = 101
+employee_id = 102
 
 # دسترسی سریع به اطلاعات کارمند با استفاده از شناسه
 if employee_id in employees:
