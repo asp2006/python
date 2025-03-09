@@ -59,7 +59,7 @@ for employee_id, employee_info in employees.items():
           f"Salary:{employee_info['salary']}")
 
 # حذف اطلاعات کارمند با شناسه 102
-del employees[102]
+del employees[101]
 
 # نمایش تمامی اطلاعات کارمندان پس از حذف
 for employee_id, employee_info in employees.items():
