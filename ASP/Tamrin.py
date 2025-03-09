@@ -2,16 +2,6 @@ import tkinter as tk
 import subprocess
 import os
 
-<<<<<<< HEAD
-# مسیر پوشه تمرینات
-exercises_folder = "training_exercises"
-
-# لیست شماره‌ها برای دکمه‌ها
-exercise_numbers = [4001, 4002, 4003, 4004, 4005, 4010, 4011, 4012, 4013, 4014, 4015, 4016, 4017, 4018, 4019, 4020, 4021, 4022, 4023, 4024, 4025, 4028, 4029, 4031, 4032, 4033, 4035, 4040, 4041, 4042, 4043, 4044, 4045, 4046, 4091, 4092, 4093, 4094, 4095, 4097, 4098, 4099, 4104, 4105, 4106]
-
-# تابع برای اجرای فایل تمرین
-def run_exercise(exercise_number):
-=======
 # بدست آوردن مسیر پوشه‌ای که فایل اصلی در آن قرار دارد
 current_directory = os.path.dirname(os.path.abspath("ASP"))
 
@@ -28,17 +18,10 @@ numbers_column_2 = [
 
 # تابع برای خواندن محتویات فایل تمرین
 def read_exercise_code(exercise_number):
->>>>>>> 29015632ee19911724222ea2be77098f157d40af
     file_path = os.path.join(exercises_folder, f"{exercise_number}.py")
     
     # بررسی اینکه آیا فایل وجود دارد یا خیر
     if os.path.isfile(file_path):
-<<<<<<< HEAD
-        # اجرای فایل پایتون
-        subprocess.run(["python", file_path])
-    else:
-        print(f"فایل برای تمرین {exercise_number} پیدا نشد!")
-=======
         with open(file_path, 'r', encoding='utf-8') as file:
             code = file.read()
         return code
@@ -75,20 +58,11 @@ def show_and_run_exercise(exercise_number):
     
     run_button = tk.Button(code_window, text="اجرای کد", command=run_code)
     run_button.pack(pady=5)
->>>>>>> 29015632ee19911724222ea2be77098f157d40af
 
 # ساخت پنجره اصلی
 root = tk.Tk()
 root.title("تمرینات پایتون")
 
-<<<<<<< HEAD
-# ساخت دکمه‌ها برای هر شماره تمرین
-for exercise_number in exercise_numbers:
-    button = tk.Button(root, text=f"تمرین {exercise_number}", command=lambda num=exercise_number: run_exercise(num))
-    button.pack(pady=5)
-
-# شروع برنامه گرافیکی
-=======
 # اضافه کردن عنوان در بالای صفحه
 title_label = tk.Label(root, text="لیست تمرینات پایتون", font=("Arial", 16, "bold"))
 title_label.pack(pady=10)
@@ -134,5 +108,4 @@ def on_mouse_wheel(event):
 canvas.bind_all("<MouseWheel>", on_mouse_wheel)
 
 # نمایش پنجره
->>>>>>> 29015632ee19911724222ea2be77098f157d40af
 root.mainloop()
