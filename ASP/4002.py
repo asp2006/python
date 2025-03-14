@@ -1,4 +1,4 @@
-# پارامترها
+# fgfgffپارامترها
 
 # Objects :
 print("halo world 2023")
