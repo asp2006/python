@@ -1,93 +1,39 @@
-people = {1: {"name": "ali", "age": 18, "city": "tehran"}}
-print(people[1]["name"])
-
-# بروز رسانی اطلاعات و پیمایش بر روی کلید و مقادیر
-
-people[2] = {"name": "sahar", "age": 12, "city": "tehran"}
-people[2]["age"] = 13
-people[2]["name"] = "sara"
-for key, value in people.items():
-    print(f"{key}: {value}")
-# delete one people : del people[1]
-
-# درباره ی خانه
-house = {"meterage": 120,
-         "bedroom": "3 rooms",
-         "balcony": "yes",
-         "yard": "no",
-         "buiit": 1996
-         }
-
-# نمایش اطلاعات خانه
-print(f"Meterage:{house['meterage']}")
-print(f"Bedroom:{house['bedroom']}")
-print(f"Balcony:{house['balcony']}")
-print(f"Yard:{house['yard']}")
-print(f"Built:{house['buiit']}")
-
-# بروز رسانی اطلاعات
-house["buiit"] = 2006
-for key, value in house.items():
-    print(f"{key}:{value}")
-
-# تعریف دیکشنری برای نگهداری اطلاعات کارمندان
-employees = {
-    101: {"name": "Ali", "department": "HR", "position": "Manager", "salary": 5000},
-    102: {"name": "Sara", "department": "IT", "position": "Developer", "salary": 4000},
-    103: {"name": "Reza", "department": "Finance", "position": "Accountant", "salary": 3500}
+# دیکشنری برای اطلاعات کشورها
+countries = {
+    1: {"name": "ایران", "capital": "تهران", "area": "1,648,195 km²", "population": "82 میلیون نفر"},
+    2: {"name": "آلمان", "capital": "برلین", "area": "357,022 km²", "population": "83 میلیون نفر"},
+    3: {"name": "فرانسه", "capital": "پاریس", "area": "643,801 km²", "population": "67 میلیون نفر"},
+    4: {"name": "ژاپن", "capital": "توکیو", "area": "377,975 km²", "population": "126 میلیون نفر"},
+    5: {"name": "کانادا", "capital": "اتاوا", "area": "9,984,670 km²", "population": "38 میلیون نفر"}
 }
 
-# شناسه کارمند
-employee_id = 102
-
-# دسترسی سریع به اطلاعات کارمند با استفاده از شناسه
-if employee_id in employees:
-    employee_info = employees[employee_id]
-    print(f"Name: {employee_info['name']}")
-    print(f"Department: {employee_info['department']}")
-    print(f"Position: {employee_info['position']}")
-    print(f"Salary: {employee_info['salary']}")
+# نمایش اطلاعات یک کشور بر اساس شناسه
+country_id = 2  # آلمان
+if country_id in countries:
+    country = countries[country_id]
+    print(f"Country: {country['name']}")
+    print(f"Capital: {country['capital']}")
+    print(f"Area: {country['area']}")
+    print(f"Population: {country['population']}")
 else:
-    print("Employee not found.")
+    print("Country not found.")
 
+# بروز رسانی اطلاعات یک کشور
+countries[3]["population"] = "68 میلیون نفر"  # بروز رسانی جمعیت فرانسه
 
-# نمایش تمامی اطلاعات کارمندان
-for employee_id, employee_info in employees.items():
-    print(f"ID:{employee_id}, Name:{employee_info['name']}, "
-          f"Department:{employee_info['department']}, "
-          f"Position:{employee_info['position']}, "
-          f"Salary:{employee_info['salary']}")
+# افزودن کشور جدید
+countries[6] = {"name": "آمریکا", "capital": "واشنگتن", "area": "9,525,067 km²", "population": "331 میلیون نفر"}
 
-# حذف اطلاعات کارمند با شناسه 102
-del employees[102]
+# نمایش اطلاعات تمامی کشورها
+for country_id, info in countries.items():
+    print(f"ID: {country_id}, Country: {info['name']}, Capital: {info['capital']}, "
+          f"Area: {info['area']}, Population: {info['population']}")
 
-# نمایش تمامی اطلاعات کارمندان پس از حذف
-for employee_id, employee_info in employees.items():
-    print(f"ID:{employee_id}, Name:{employee_info['name']}, "
-          f"Department:{employee_info['department']}, "
-          f"Position:{employee_info['position']}, "
-          f"Salary:{employee_info['salary']}")
+# حذف یک کشور
+del countries[5]  # حذف کانادا
 
-
-# دیکشنری برای تبدیل کد کشور به نام کشور
-country_conversion = {
-    +1: "United States",
-    +98: "Iran",
-    +44: "United Kingdom",
-    +49: "Germany",
-    +33: "France",
-    +91: "India",
-    +81: "Japan",
-    +61: "Australia",
-    +55: "Brazil",
-    +52: "Mexico"
-}
-
-# لیست کد کشورهای که نیاز است به نام کشور تبدیل شوند
-country_codes = [+81, +44, +98]
-
-# تبدیل کد کشورها به نام کشورها
-country_names = [country_conversion[code] for code in country_codes]
-
-print("Country codes:", country_codes)
-print("Country names:", country_names)
+# نمایش اطلاعات پس از حذف
+print("\nCountry data after deleting Canada:")
+for country_id, info in countries.items():
+    print(f"ID: {country_id}, Country: {info['name']}, Capital: {info['capital']}, "
+          f"Area: {info['area']}, Population: {info['population']}")
