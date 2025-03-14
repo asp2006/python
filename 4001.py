@@ -1,2 +1,2 @@
-print("به برنامه پایتون خوش آمدید")
+print("به برنامه پایتون خوش آمدید")fggfd
 vnghmhgmfhtytujtdjrxy =fggfdbgh
