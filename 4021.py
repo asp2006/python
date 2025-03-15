@@ -1,34 +1,39 @@
 # ساختار پایه if :
 x = 10
 if x > 5:
-    print("x is greater than 5")
+    print("x بزرگتر از 5 است")
+
 # تورفتگی (Indentation) :
 x = 10
 if x > 11:
-    print("x is greater than 11")
+    print("x بزرگتر از 11 است")
 else:
-    print("x is samll")
+    print("x کوچکتر است")
+
 # عملگرهای مقایسه‌ای و منطقی :
 x = 7
 y = 9
 if x > 5 and y < 10:
-    print("both condition are true")
+    print("هر دو شرط درست هستند")
+
 # ارزیابی‌های شرطی :
 if "hello":
-    print("This will print")
+    print("این چاپ خواهد شد")
 if 0:
-    print("this will not print")
+    print("این چاپ نخواهد شد")
+
 # شرط‌های تو در تو (Nested Conditions) :
 x = 10 
 if x > 5:
-    print("x is greater than 5")
+    print("x بزرگتر از 5 است")
     if x > 8:
-        print("x is also greater than 8")
-#  استفاده از elif و else :
+        print("x همچنین بزرگتر از 8 است")
+
+# استفاده از elif و else :
 x = 15
 if x > 20:
-    print("x is greater than 20")
+    print("x بزرگتر از 20 است")
 elif x > 10:
-    print("x is greater than 10 but less than equal to 20")
+    print("x بزرگتر از 10 است اما کمتر از یا برابر با 20 است")
 else:
-    print("x is 10 or less")
+    print("x برابر با 10 یا کمتر است")
