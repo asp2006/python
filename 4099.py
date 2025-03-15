@@ -1,3 +1,5 @@
+# هدف: بارگذاری داده‌ها از چندین فایل اکسل و درج آن‌ها در کالکشن‌های مختلف در MongoDB با استفاده از نام فایل‌ها به عنوان نام کالکشن‌ها.
+
 from openpyxl import load_workbook
 from pymongo import MongoClient
 
