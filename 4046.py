@@ -1,3 +1,6 @@
+# هدف: استخراج نسخه‌های پایتون از سایت رسمی python.org و ذخیره آن‌ها در دیتابیس MongoDB.
+
+
 import requests
 from bs4 import BeautifulSoup
 import pymongo
