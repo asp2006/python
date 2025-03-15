@@ -1,4 +1,5 @@
-# The number of iraninan cities in order
-cities = ["Tehran","Mashahd","Isfahan","Karaj","Shiraz"]
-for index, city in enumerate(cities, start=1):
-    print(f"Number{index} - {city}")
+# تعداد شهرهای ایران به ترتیب
+شهرها = ["تهران", "مشهد", "اصفهان", "کرج", "شیراز"]
+
+for شماره, شهر in enumerate(شهرها, start=1): 
+    print(f"شماره {شماره} - {شهر}")
