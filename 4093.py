@@ -1,3 +1,6 @@
+# هدف: نمایش نحوه ویرایش رکوردها در MongoDB با استفاده از دستور update_many برای تغییر مقادیر در چندین رکورد مطابق با شرایط خاص.
+
+
 from pymongo import MongoClient
 
 # اتصال به MongoDB
