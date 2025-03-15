@@ -1,3 +1,6 @@
+# هدف: نمایش نحوه استخراج متن از فایل PDF با استفاده از کتابخانه pdfplumber در پایتون.
+
+
 # استخراج متن از فایل PDF با pdfplumber :
 import pdfplumber
 
