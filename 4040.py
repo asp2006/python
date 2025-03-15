@@ -1,3 +1,6 @@
+# هدف: نمایش نحوه کار با داده‌های اکسل در پایتون با استفاده از pandas و openpyxl، شامل خواندن و نوشتن داده‌ها، انتخاب شیت‌ها، افزودن داده و فیلتر کردن داده‌ها.
+
+
 import pandas as pd
 from openpyxl import load_workbook
 
