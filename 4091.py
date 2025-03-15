@@ -1,3 +1,6 @@
+# هدف: اتصال به MongoDB، درج سند در کالکشن و نمایش پایگاه داده‌ها و کالکشن‌ها.
+
+
 from pymongo import MongoClient
 
 
