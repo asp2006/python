@@ -1,3 +1,5 @@
+# هدف: ایجاد یک فرم ورود ساده با استفاده از Tkinter که پس از ورود موفقیت‌آمیز، پنجره داشبورد جدیدی را نمایش می‌دهد.
+
 import tkinter as tk
 from tkinter import messagebox
 
