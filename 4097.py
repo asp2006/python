@@ -1,3 +1,5 @@
+# هدف: اتصال به MongoDB و درج داده‌ها در کالکشن‌های مختلف با استفاده از insert_many و مدیریت داده‌ها در دو کالکشن مجزا.
+
 from pymongo import MongoClient
 from datetime import datetime
 
