@@ -36,7 +36,7 @@ print("کشور:", country)
 try:
     location_info[1] = 20002  # تلاش برای تغییر کد پستی
 except TypeError as e:
-    print("خطا:", e)  # چاپ خطا در صورت تغییر ندادن داده
+    print("خطا: شما نمی‌توانید داده‌های یک تاپل را تغییر دهید.")  # نمایش پیام خطا به فارسی
 
 # تابع برای محاسبه مساحت و محیط یک مستطیل
 def calculate_area_perimeter(length, width):
