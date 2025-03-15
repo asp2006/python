@@ -1,3 +1,6 @@
+# هدف: نمایش نحوه حذف رکوردها از MongoDB با استفاده از دستورات delete_one و delete_many بر اساس شرایط خاص.
+
+
 from pymongo import MongoClient
 
 # اتصال به MongoDB
@@ -18,5 +21,3 @@ result = collection.delete_many(filter)
 print("Deleted count:", result.deleted_count)
 # بستن اتصال
 client.close()
-
-
