@@ -7,17 +7,17 @@ print(y)
 # استفاده در مقایسه‌ها :
 a = 5
 b = 10
-result = a > b
-print(result)
+نتیجه = a > b
+print(نتیجه)
 
 # استفاده در شرایط شرطی :
-is_raning = False
-if is_raning:
-    print("is raning")
-else :
-    print("is not raning")
+بارش_باران = False
+if بارش_باران:
+    print("بارش باران در حال وقوع است")
+else:
+    print("بارش باران در حال وقوع نیست")
 
 # تبدیل انواع داده‌ها به نوع بولی :
-print(bool(''))
-print(bool("hello"))
-print(bool([1,2,3]))
+print(bool(''))  # تبدیل رشته خالی به بولین (False)
+print(bool("hello"))  # تبدیل رشته غیرخالی به بولین (True)
+print(bool([1, 2, 3]))  # تبدیل لیست غیرخالی به بولین (True)
