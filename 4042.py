@@ -4,7 +4,7 @@
 import PyPDF2
 
 # باز کردن فایل PDF
-with open(r"C:\Users\kara\OneDrive\Desktop\python\ASP\leo.pdf", 'rb') as file:
+with open(r"C:\Users\kara\OneDrive\Desktop\python\ASP\story.pdf", 'rb') as file:
     reader = PyPDF2.PdfReader(file)
 
     # استخراج متن از هر صفحه
