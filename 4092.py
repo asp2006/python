@@ -1,3 +1,6 @@
+# هدف: نمایش نحوه درج یک رکورد واحد و چند رکورد در MongoDB با استفاده از insert_one و insert_many و همچنین مدیریت خطاها.
+
+
 # درج یک رکورد با insert_one :
 
 from pymongo import MongoClient
