@@ -1,3 +1,5 @@
+# هدف: نمایش داده‌ها در یک جدول (DataGrid) با استفاده از Tkinter و Treeview که شامل ستون‌هایی مانند "ID"، "Name" و "Age" است.
+
 import tkinter as tk
 from tkinter import ttk
 
