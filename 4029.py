@@ -1,52 +1,82 @@
-#  مثال برای استفاده از ماژول math و تابع sqrt :
+# 1. استفاده از ماژول math و تابع sqrt:
 import math
+# محاسبه ریشه دوم عدد 16
 result = math.sqrt(16)
-print(result)
+print(result)  # خروجی: 4.0
 
-# تولید عدد تصادفی با ماژول random :
-import random 
+# 2. تولید عدد تصادفی با ماژول random:
+import random
+# تولید یک عدد تصادفی بین 1 و 10
 random_number = random.randint(1, 10)
 print(random_number)
 
-sample_list = ['apple', 'banana', 'chery']
-random_fruit = random.choice(sample_list)
+# انتخاب تصادفی یک میوه از لیست
+fruit_list = ['سیب', 'موز', 'گیلاس']
+random_fruit = random.choice(fruit_list)
 print(random_fruit)
 
-# استفاده از ماژول datetime برای کار با تاریخ و زمان :
-# دریافت تاریخ و زمان فعلی
+# 3. استفاده از ماژول datetime برای کار با تاریخ و زمان:
 import datetime
-now = datetime.datetime.now()
-print(now)
-#  ایجاد یک تاریخ خاص :
-sepcific_date = datetime.date(2023,10,10)
-print(sepcific_date)
- 
- # استفاده از ماژول os برای تعامل با سیستم فایل :
+# دریافت تاریخ و زمان فعلی
+current_time = datetime.datetime.now()
+print(current_time)  # خروجی: تاریخ و زمان فعلی
+
+# ایجاد یک تاریخ خاص
+specific_date = datetime.date(2023, 10, 10)
+print(specific_date)  # خروجی: 2023-10-10
+
+# 4. استفاده از ماژول os برای تعامل با سیستم فایل:
 import os
+# دریافت لیست فایل‌ها و دایرکتوری‌ها در دایرکتوری فعلی
 files = os.listdir('.')
 print(files)
 
-#  استفاده از ماژول sys برای نمایش نسخه پایتون و آرگومان‌های خط فرمان :
+# 5. استفاده از ماژول sys برای نمایش نسخه پایتون و آرگومان‌های خط فرمان:
 import sys
+# نمایش نسخه پایتون
 print(sys.version)
+
+# نمایش آرگومان‌های خط فرمان
 print(sys.argv)
 
-# تبدیل داده‌ها با ماژول json :
+# 6. تبدیل داده‌ها با ماژول json:
 import json
-data = {"name": "ali", "age": 19, "city":"Abadan"}
+# ایجاد داده‌ها به صورت دیکشنری
+data = {"name": "Ali", "age": 19, "city": "Abadan"}
+# تبدیل دیکشنری به رشته JSON
 json_data = json.dumps(data)
-print(json_data)
-load_data = json.loads(json_data)
-print(load_data)
+print(json_data)  # خروجی: {"name": "Ali", "age": 19, "city": "Abadan"}
 
-# استفاده از ماژول re برای کار با عبارات منظم :
+# تبدیل رشته JSON به دیکشنری
+loaded_data = json.loads(json_data)
+print(loaded_data)  # خروجی: {'name': 'Ali', 'age': 19, 'city': 'Abadan'}
+
+# 7. استفاده از ماژول re برای کار با عبارات منظم:
 import re
-pattern = r'\d+'
+# الگوی جستجو برای اعداد
+pattern = r'\d+'  # جستجو برای اعداد
 text = "There are 12 apples and 34 oranges."
 matches = re.findall(pattern, text)
-print(matches)
+print(matches)  # خروجی: ['12', '34']
 
-# استفاده از ماژول requests برای ارسال درخواست HTTP :
+# 8. استفاده از ماژول requests برای ارسال درخواست HTTP:
 import requests
-reseponse = requests.get('https://chatgpt.com/')
-print(reseponse.status_code)
+
+# URL برای دریافت اطلاعات از CoinGecko
+url = 'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd'
+
+# ارسال درخواست GET به API CoinGecko
+response = requests.get(url)
+
+# بررسی وضعیت درخواست
+if response.status_code == 200:
+    print("درخواست موفقیت‌آمیز بود!")
+    
+    # دریافت داده‌ها به صورت JSON
+    data = response.json()
+    
+    # استخراج قیمت بیت کوین از پاسخ
+    bitcoin_price = data['bitcoin']['usd']
+    print(f"قیمت بیت کوین: {bitcoin_price} USD")
+else:
+    print(f"خطا در دریافت داده: {response.status_code}")
