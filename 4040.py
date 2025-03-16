@@ -5,7 +5,7 @@ import pandas as pd
 from openpyxl import load_workbook
 
 # مسیر فایل اکسل ورودی
-file_path = r"C:\Users\kara\OneDrive\Desktop\python\ASP\samole1.xlsx"
+file_path = r"C:\Users\kara\OneDrive\Desktop\python\ASP\sample1.xlsx"
 df = pd.read_excel(file_path)
 print("داده‌ها از فایل اصلی:")
 print(df)
